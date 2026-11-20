@@ -261,6 +261,183 @@
       box-shadow: 0 0 9px rgba(74, 222, 128, 0.8);
     }
 
+    /* ========== 顶部玩家状态栏 ========== */
+    .player-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: -3px 0 14px;
+      padding: 7px 9px 7px 12px;
+      border: 1px solid rgba(148, 163, 184, 0.13);
+      border-radius: 12px;
+      background: rgba(10, 18, 31, 0.64);
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .player-identity {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .player-dot {
+      flex: none;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 9px rgba(74, 222, 128, 0.75);
+    }
+
+    .player-name {
+      max-width: 220px;
+      overflow: hidden;
+      color: #e3eeff;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .switch-player-btn {
+      flex: none;
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: rgba(15, 25, 42, 0.58);
+      color: #b7c7dc;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .switch-player-btn:hover {
+      border-color: rgba(148, 163, 184, 0.44);
+      background: rgba(24, 38, 61, 0.82);
+      color: #eef5ff;
+    }
+
+    /* ========== 玩家登录界面 ========== */
+    .login-panel {
+      padding: 32px 28px;
+    }
+
+    .login-title {
+      margin: 0;
+      font-size: 29px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+    }
+
+    .login-desc {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 23px;
+    }
+
+    .login-label {
+      color: #a9bad1;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .player-input {
+      width: 100%;
+      height: 46px;
+      padding: 0 14px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 12px;
+      background: rgba(6, 13, 24, 0.79);
+      color: var(--text);
+      font: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      outline: none;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .player-input::placeholder {
+      color: #536780;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .player-input:focus {
+      border-color: rgba(74, 222, 128, 0.6);
+      box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+    }
+
+    .player-input.is-invalid {
+      border-color: rgba(248, 113, 113, 0.7);
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.09);
+    }
+
+    .login-error {
+      min-height: 16px;
+      margin: 0;
+      color: #fca5a5;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .login-submit {
+      width: 100%;
+      height: 45px;
+      margin-top: 3px;
+      border: 0;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #86efac, #22c55e);
+      color: #04150b;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      box-shadow:
+        0 12px 30px rgba(34, 197, 94, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.38);
+      transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .login-submit:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow:
+        0 15px 34px rgba(34, 197, 94, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.38);
+    }
+
+    .login-submit:active {
+      transform: translateY(1px);
+    }
+
+    .login-hint {
+      margin: 16px 0 0;
+      color: #5f7290;
+      font-size: 9px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
     /* ========== 难度选择界面 ========== */
     .select-panel {
       padding: 26px;
@@ -737,6 +914,23 @@
         font-size: 9px;
       }
 
+      .player-bar {
+        margin-bottom: 12px;
+        padding: 6px 7px 6px 10px;
+      }
+
+      .player-name {
+        max-width: 130px;
+      }
+
+      .login-panel {
+        padding: 24px 18px;
+      }
+
+      .login-title {
+        font-size: 25px;
+      }
+
       .select-panel {
         padding: 21px 17px;
       }
@@ -846,13 +1040,55 @@
       </span>
     </header>
 
+    <!-- 顶部玩家状态栏 -->
+    <div class="player-bar" id="playerBar" aria-label="当前玩家" hidden>
+      <span class="player-identity">
+        <span class="player-dot" aria-hidden="true"></span>
+        玩家：<b class="player-name" id="playerValue">—</b>
+      </span>
+      <button type="button" class="switch-player-btn" id="switchPlayerBtn">切换玩家</button>
+    </div>
+
+    <!-- 玩家登录界面 -->
+    <section class="view" id="loginScreen" aria-labelledby="loginTitle">
+      <div class="select-panel login-panel">
+        <p class="eyebrow">Player Login</p>
+        <h2 class="login-title" id="loginTitle">玩家登录</h2>
+        <p class="login-desc">
+          输入 2-12 位字母或数字。最高分将按玩家与难度分别保存在本机。
+        </p>
+
+        <form class="login-form" id="loginForm" novalidate>
+          <label class="login-label" for="playerInput">玩家 ID</label>
+          <input
+            class="player-input"
+            id="playerInput"
+            type="text"
+            maxlength="12"
+            pattern="[A-Za-z0-9]{2,12}"
+            autocomplete="username"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="例如：Player01"
+            aria-describedby="loginError"
+          />
+          <p class="login-error" id="loginError" role="alert"></p>
+          <button type="submit" class="login-submit">确认</button>
+        </form>
+
+        <p class="login-hint">
+          存档只保存在当前浏览器 · 不联网、不上传
+        </p>
+      </div>
+    </section>
+
     <!-- 难度选择界面 -->
     <section class="view" id="selectScreen" aria-labelledby="selectTitle">
       <div class="select-panel">
         <p class="eyebrow">Choose Your Pace</p>
         <h2 class="select-title" id="selectTitle">选择难度</h2>
         <p class="select-subtitle">
-          三种节奏，同一套规则。最高分会按难度分别保存在本机。
+          三种节奏，同一套规则。最高分会按玩家和难度分别保存在本机。
         </p>
 
         <div class="difficulty-list" role="group" aria-label="选择游戏难度">
@@ -998,12 +1234,9 @@
         })
       });
 
-      // 每个难度单独保存最高分
-      const HIGH_SCORE_KEYS = Object.freeze({
-        easy: "snake_highscore_easy",
-        normal: "snake_highscore_normal",
-        hard: "snake_highscore_hard"
-      });
+      // 会话中记住当前玩家，刷新后可跳过登录
+      const CURRENT_USER_KEY = "snake_current_user";
+      const PLAYER_ID_PATTERN = /^[A-Za-z0-9]{2,12}$/;
 
       // 中部集中区域：以网格中心为基准的 15 × 15
       const CENTRAL_REGION_SIZE = 15;
@@ -1012,6 +1245,7 @@
       const INITIAL_CLEAR_AHEAD = 6;
 
       const State = Object.freeze({
+        LOGIN: "login",
         SELECTING: "selecting",
         RUNNING: "running",
         PAUSED: "paused",
@@ -1043,6 +1277,13 @@
       const app = document.getElementById("app");
       const canvas = document.getElementById("gameCanvas");
       const ctx = canvas.getContext("2d");
+      const loginScreen = document.getElementById("loginScreen");
+      const loginForm = document.getElementById("loginForm");
+      const playerInput = document.getElementById("playerInput");
+      const loginError = document.getElementById("loginError");
+      const playerBar = document.getElementById("playerBar");
+      const playerValueEl = document.getElementById("playerValue");
+      const switchPlayerBtn = document.getElementById("switchPlayerBtn");
       const selectScreen = document.getElementById("selectScreen");
       const gameScreen = document.getElementById("gameScreen");
       const gameStats = document.getElementById("gameStats");
@@ -1075,32 +1316,83 @@
       );
 
       /* ============================================================
-         3. 分难度最高分
+         3. 玩家会话与独立最高分
+         ------------------------------------------------------------
+         最高分 key 必须同时包含玩家 ID 和难度，例如：
+         snake_highscore_Player01_hard
          ============================================================ */
-      function loadHighScore(difficultyKey) {
+      function isValidPlayerId(value) {
+        return typeof value === "string" && PLAYER_ID_PATTERN.test(value);
+      }
+
+      function readStoredPlayerId() {
         try {
-          const stored = Number(
-            localStorage.getItem(HIGH_SCORE_KEYS[difficultyKey])
-          );
+          const stored = localStorage.getItem(CURRENT_USER_KEY);
+          return isValidPlayerId(stored) ? stored : null;
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function persistPlayerId(playerId) {
+        try {
+          localStorage.setItem(CURRENT_USER_KEY, playerId);
+        } catch (error) {
+          // 本地存储不可用时，本次会话仍然可以继续游戏
+        }
+      }
+
+      function clearStoredPlayerId() {
+        try {
+          localStorage.removeItem(CURRENT_USER_KEY);
+        } catch (error) {
+          // 忽略本地存储异常
+        }
+      }
+
+      // 严格按“玩家 ID + 难度”读取当前组合
+      function getHighScoreKey(difficultyKey) {
+        if (!currentPlayerId) return null;
+        return `snake_highscore_${currentPlayerId}_${difficultyKey}`;
+      }
+
+      function loadHighScore(difficultyKey) {
+        const storageKey = getHighScoreKey(difficultyKey);
+        if (!storageKey) return 0;
+
+        try {
+          const stored = Number(localStorage.getItem(storageKey));
           if (Number.isFinite(stored) && stored > 0) {
             return Math.floor(stored);
           }
         } catch (error) {
-          // 浏览器禁用本地存储时，最高分只在本次页面中有效
+          // 浏览器禁用本地存储时，最高分按 0 处理
         }
         return 0;
       }
 
-      const highScores = {
-        easy: loadHighScore("easy"),
-        normal: loadHighScore("normal"),
-        hard: loadHighScore("hard")
+      let currentPlayerId = null;
+      let highScores = {
+        easy: 0,
+        normal: 0,
+        hard: 0
       };
 
+      function loadPlayerHighScores() {
+        highScores = {
+          easy: loadHighScore("easy"),
+          normal: loadHighScore("normal"),
+          hard: loadHighScore("hard")
+        };
+      }
+
       function saveHighScore(difficultyKey) {
+        const storageKey = getHighScoreKey(difficultyKey);
+        if (!storageKey) return;
+
         try {
           localStorage.setItem(
-            HIGH_SCORE_KEYS[difficultyKey],
+            storageKey,
             String(highScores[difficultyKey])
           );
         } catch (error) {
@@ -1126,7 +1418,7 @@
 
       let score = 0;
       let highScore = 0;
-      let state = State.SELECTING;
+      let state = State.LOGIN;
       let overlayMode = "over";
 
       // 当前棋盘的派生尺寸
@@ -1191,9 +1483,120 @@
         });
       }
 
+      function setLoginError(message) {
+        loginError.textContent = message;
+        playerInput.classList.toggle("is-invalid", Boolean(message));
+        playerInput.setAttribute("aria-invalid", message ? "true" : "false");
+      }
+
+      function clearLoginError() {
+        setLoginError("");
+      }
+
+      function enterPlayerSession(playerId) {
+        currentPlayerId = playerId;
+        persistPlayerId(playerId);
+        loadPlayerHighScores();
+
+        loginScreen.hidden = true;
+        selectScreen.hidden = false;
+        gameScreen.hidden = true;
+        gameStats.hidden = true;
+        playerBar.hidden = false;
+        lobbyChip.hidden = false;
+
+        currentDifficultyKey = null;
+        currentDifficulty = null;
+        snake = [];
+        direction = VECTORS.RIGHT;
+        directionQueue = [];
+        food = null;
+        obstacles = [];
+        obstacleSet = new Set();
+        score = 0;
+        highScore = 0;
+        accumulator = 0;
+        lastFrameTime = performance.now();
+        state = State.SELECTING;
+
+        app.style.setProperty("--board-size", "400px");
+        playerValueEl.textContent = playerId;
+        playerInput.value = playerId;
+        scoreEl.textContent = "0";
+        highScoreEl.textContent = "0";
+        difficultyValueEl.textContent = "—";
+        difficultyValueEl.removeAttribute("data-difficulty");
+        overlay.hidden = true;
+        clearLoginError();
+        updateStatus();
+        updateDifficultyCards();
+      }
+
+      function showLoginScreen() {
+        state = State.LOGIN;
+        currentPlayerId = null;
+        highScores = { easy: 0, normal: 0, hard: 0 };
+
+        currentDifficultyKey = null;
+        currentDifficulty = null;
+        snake = [];
+        direction = VECTORS.RIGHT;
+        directionQueue = [];
+        food = null;
+        obstacles = [];
+        obstacleSet = new Set();
+        score = 0;
+        highScore = 0;
+        accumulator = 0;
+        lastFrameTime = performance.now();
+        overlayMode = "over";
+
+        loginScreen.hidden = false;
+        selectScreen.hidden = true;
+        gameScreen.hidden = true;
+        gameStats.hidden = true;
+        playerBar.hidden = true;
+        lobbyChip.hidden = true;
+        overlay.hidden = true;
+
+        app.style.setProperty("--board-size", "400px");
+        playerValueEl.textContent = "—";
+        playerInput.value = "";
+        scoreEl.textContent = "0";
+        highScoreEl.textContent = "0";
+        difficultyValueEl.textContent = "—";
+        difficultyValueEl.removeAttribute("data-difficulty");
+        clearLoginError();
+        updateStatus();
+        updateDifficultyCards();
+
+        // 登录界面显示后再聚焦输入框
+        playerInput.focus();
+      }
+
+      function handleLoginSubmit(event) {
+        event.preventDefault();
+
+        const playerId = playerInput.value.trim();
+        if (!isValidPlayerId(playerId)) {
+          setLoginError("请输入 2-12 位字母或数字。");
+          playerInput.focus();
+          return;
+        }
+
+        playerInput.value = playerId;
+        enterPlayerSession(playerId);
+      }
+
+      function switchPlayer() {
+        // 清除会话身份，返回登录界面；其他玩家的最高分不会被删除
+        clearStoredPlayerId();
+        showLoginScreen();
+      }
+
       function startGame(difficultyKey) {
         const difficulty = DIFFICULTIES[difficultyKey];
-        if (!difficulty) return;
+        if (!difficulty || !currentPlayerId) return;
 
         currentDifficultyKey = difficultyKey;
         currentDifficulty = difficulty;
@@ -1204,6 +1607,7 @@
         selectScreen.hidden = true;
         gameScreen.hidden = false;
         gameStats.hidden = false;
+        playerBar.hidden = false;
         lobbyChip.hidden = true;
 
         difficultyValueEl.textContent = difficulty.label;
@@ -1213,7 +1617,7 @@
       }
 
       function returnToDifficultySelect() {
-        // 中止当前局，并清空全部运行状态；最高分记录仍然保留
+        // 中止当前局，并清空全部运行状态；当前玩家与最高分记录保留
         state = State.SELECTING;
         currentDifficultyKey = null;
         currentDifficulty = null;
@@ -1232,8 +1636,10 @@
         overlayMode = "over";
 
         overlay.hidden = true;
+        loginScreen.hidden = true;
         gameScreen.hidden = true;
         gameStats.hidden = true;
+        playerBar.hidden = false;
         selectScreen.hidden = false;
         lobbyChip.hidden = false;
 
@@ -1569,11 +1975,12 @@
         // 忽略长按重复和浏览器组合键
         if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
 
+        // 登录 / 难度选择 / 结束遮罩中不拦截键盘，保证输入框和按钮可用
+        if (state !== State.RUNNING && state !== State.PAUSED) return;
+
         if (event.code === "Space") {
-          if (state === State.RUNNING || state === State.PAUSED) {
-            event.preventDefault();
-            togglePause();
-          }
+          event.preventDefault();
+          togglePause();
           return;
         }
 
@@ -1582,7 +1989,6 @@
 
         event.preventDefault();
 
-        // 结束、暂停或选择难度时，方向键不会改变游戏状态
         if (state !== State.RUNNING) return;
         enqueueDirection(nextDirection);
       }
@@ -2037,6 +2443,12 @@
         });
       });
 
+      loginForm.addEventListener("submit", handleLoginSubmit);
+      playerInput.addEventListener("input", () => {
+        if (loginError.textContent) clearLoginError();
+      });
+      switchPlayerBtn.addEventListener("click", switchPlayer);
+
       primaryBtn.addEventListener("click", handlePrimaryButton);
       changeDifficultyBtn.addEventListener("click", returnToDifficultySelect);
 
@@ -2049,9 +2461,17 @@
         }
       });
 
-      // 页面启动时先停在难度选择界面
+      // 有有效会话时跳过登录；否则显示登录界面
       updateDifficultyCards();
-      returnToDifficultySelect();
+      const savedPlayerId = readStoredPlayerId();
+
+      if (savedPlayerId) {
+        enterPlayerSession(savedPlayerId);
+      } else {
+        clearStoredPlayerId();
+        showLoginScreen();
+      }
+
       requestAnimationFrame(gameLoop);
     })();
   </script>
